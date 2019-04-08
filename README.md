@@ -30,19 +30,33 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.forEach returns undefined. Doesnt return a new array like .map
+
 2. What is the difference between a function and a method?
+
+A function can pass data to operate on and a method implicitly pasess the object on which it was called and is able to
+operate on the data that is contained within the class
 
 3. What is closure?
 
+closures give access to outer functions scope from an inner function
+
 4. Describe the four rules of the 'this' keyword.
 
-5. Why do we need super() in an extended class?
+ Window Binding: Refers to the window object(Everything)
+Implicit Binding: Whatever is before the (.) is what (this) will be bound to
+New Binding: Made to build object literals
+Explicit Binding: using call or apply
+
+2. Why do we need super() in an extended class?
+
+It is used to access and call functions on an object's parent.
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
+- [ ] Create a forked copy of this project. 
 - [ ] Add PM as collaborator on Github.
 - [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
 - [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.

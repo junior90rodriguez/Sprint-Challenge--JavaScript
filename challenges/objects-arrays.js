@@ -101,8 +101,14 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
-console.log(uni);
+// const uni = [];
+
+// for (i = 0; i < graduates.length; i++) {
+//   graduates[i].university;
+//   if (university === Uni)
+//   uni.push(graduates[i].university);
+// }
+// console.log(uni);
 
 
 // ==== ADVANCED Array Methods ====
@@ -126,8 +132,14 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const animalNames = [];
-console.log(animalNames);
+
+zooAnimals.forEach(function(animalNames) {
+  console.log(`name:${animalNames.animal_name}, scientific:${animalNames.scientific_name}`);
+});
+
+
+
+
 
 /* Request 2: .map()    
 
@@ -135,15 +147,22 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
-console.log(lowerCase); 
+// const lowerCase = zooAnimals.map(function(currentValue) {
+//   return currentValue.first_name.toLowerCase();
+// });
+
+// console.log(lowerCase); 
 
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const largerPopulation = [];
+const largerPopulation = zooAnimals.filter(function(value) {
+  return value.population <= 5;
+})
+
+
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
@@ -151,7 +170,9 @@ console.log(largerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+const populationTotal = zooAnimals.reduce(function(accumulator, currentVal) {
+  return accumulator + currentVal.population;
+}, 0);
 console.log(populationTotal);
 
 
